@@ -12,9 +12,9 @@ const services = [
 
 const translations = {
   en: {
-    pageTitle: 'Forma Studio — Good ideas deserve a great shape',
-    pageDescription: 'Forma is an independent creative studio helping ambitious businesses shape their next big idea.',
-    homeLabel: 'Forma Studio home',
+    pageTitle: 'Parto Kherad Afzar — Good ideas deserve a great shape',
+    pageDescription: 'Parto Kherad Afzar helps ambitious businesses shape their next big idea.',
+    homeLabel: 'Parto Kherad Afzar home',
     menuOpen: 'Open navigation menu',
     menuClose: 'Close navigation menu',
     navigationLabel: 'Main navigation',
@@ -29,7 +29,7 @@ const translations = {
       secondary: 'Explore our work',
       proofTitle: 'Small team. Big energy.',
       proofDescription: "Made for the people building what's next.",
-      artLabel: "A preview of Forma Studio's creative work",
+      artLabel: "A preview of Parto Kherad Afzar's creative work",
       stickerTop: <>IDEAS<br />IN MOTION</>,
       miniKicker: 'A NEW KIND OF GOOD',
       miniHeadline: <>Make room<br />for <em>more.</em></>,
@@ -77,14 +77,14 @@ const translations = {
     },
     footer: {
       tagline: 'Good things take shape here.',
-      copyright: '© 2025 Forma Studio',
+      copyright: '© 2025 Parto Kherad Afzar',
       backToTop: 'Back to top',
     },
   },
   fa: {
-    pageTitle: 'استودیو فورما — ایده‌های خوب، شایسته‌ی شکل و قالبی عالی‌اند',
-    pageDescription: 'فورما یک استودیوی خلاق مستقل است که به کسب‌وکارهای بلندپرواز کمک می‌کند ایده‌های بزرگشان را به واقعیت تبدیل کنند.',
-    homeLabel: 'صفحه اصلی استودیو فورما',
+    pageTitle: 'پرتو خرد افزار — ایده‌های خوب، شایسته‌ی شکل و قالبی عالی‌اند',
+    pageDescription: 'پرتو خرد افزار به کسب‌وکارهای بلندپرواز کمک می‌کند ایده‌های بزرگشان را به واقعیت تبدیل کنند.',
+    homeLabel: 'صفحه اصلی پرتو خرد افزار',
     menuOpen: 'باز کردن فهرست',
     menuClose: 'بستن فهرست',
     navigationLabel: 'ناوبری اصلی',
@@ -99,7 +99,7 @@ const translations = {
       secondary: 'دیدن خدمات ما',
       proofTitle: 'تیمی کوچک، پر از انرژی.',
       proofDescription: 'برای کسانی که آینده را می‌سازند.',
-      artLabel: 'پیش‌نمایشی از کارهای خلاقانه استودیو فورما',
+      artLabel: 'پیش‌نمایشی از کارهای خلاقانه پرتو خرد افزار',
       stickerTop: <>ایده‌ها<br />در حرکت</>,
       miniKicker: 'نگاهی تازه به خوبی',
       miniHeadline: <>برای <em>بیشتر</em><br />جا باز کن.</>,
@@ -147,7 +147,7 @@ const translations = {
     },
     footer: {
       tagline: 'ایده‌های خوب، اینجا شکل می‌گیرند.',
-      copyright: '© ۲۰۲۵ استودیو فورما',
+      copyright: '© ۲۰۲۵ پرتو خرد افزار',
       backToTop: 'بازگشت به بالا',
     },
   },
@@ -176,12 +176,7 @@ function App() {
     <main className={isPersian ? 'persian-page' : undefined} lang={language} dir={isPersian ? 'rtl' : 'ltr'}>
       <header className="site-header">
         <a className="brand" href="#home" aria-label={copy.homeLabel} onClick={closeMenu} dir="ltr">
-          <span className="brand-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </span>
-          <span>forma<span className="brand-period">.</span></span>
+          <img src="/logo.png" alt="" />
         </a>
 
         <div className="language-switch" role="group" aria-label={isPersian ? 'انتخاب زبان' : 'Choose language'} dir="ltr">
@@ -264,7 +259,7 @@ function App() {
           </div>
           <div className="art-card art-card-main">
             <div className="main-card-top">
-              <span className="mini-brand"><b /> forma</span>
+              <span className="mini-brand"><b /> {isPersian ? 'پرتو' : 'parto'}</span>
               <span className="mini-menu">☰</span>
             </div>
             <div className="main-card-content">
@@ -359,8 +354,7 @@ function App() {
 
       <footer className="site-footer section-wrap">
         <a className="brand" href="#home" aria-label={copy.homeLabel} dir="ltr">
-          <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
-          <span>forma<span className="brand-period">.</span></span>
+          <img src="/logo.png" alt="" />
         </a>
         <p>{copy.footer.tagline}</p>
         <span className="copyright">{copy.footer.copyright}</span>
